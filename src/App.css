@@ -1,38 +1,81 @@
+/* App.css */
+
+/* Estilos generales de la aplicación */
 .App {
-  text-align: center;
+  background-color: #f4f4f4;
+  padding: 20px;
+  transition: background-color 0.3s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Estilos en modo oscuro */
+.App.dark-mode {
+  background-color: #333;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Estilos del encabezado */
+.header {
+  display: flex;
+  flex-direction: column; /* Cambiado a columna para móviles */
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Estilos del título */
+h1 {
+  margin: 0;
+}
+
+/* Estilos de los botones comunes */
+button {
+  margin-top: 10px; /* Espacio entre el título y el botón */
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Cambio de color al pasar el ratón por encima */
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Contenedor para selectores u otros elementos */
+.select-container {
+  margin-top: 10px;
+}
+
+/* Estilo para el botón de modo oscuro en la esquina superior derecha */
+.dark-mode-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+/* Reglas de medios para dispositivos móviles */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column; /* Cambiado a columna para dispositivos móviles */
   }
-  to {
-    transform: rotate(360deg);
+
+  button {
+    margin-top: 10px;
+  }
+
+  .select-container {
+    margin-top: 10px;
+  }
+
+  /* Estilo para el mensaje en dispositivos móviles */
+  .message {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
   }
 }
